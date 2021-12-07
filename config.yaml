@@ -1,0 +1,12 @@
+---
+- hosts: Ubuntu
+  roles:
+    - install-python
+    - install-java
+    - role: change-motd
+      vars:
+        motd: "Ansible Managed node by qjrlmontecalvo"
+    - role: create-user
+      vars:
+        username: "qjrlmontecalvo"
+        name: "John Ryan L. Montecalvo"
